@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weekly Cyber Trends Report - 2026-10-19</title>
+<title>Weekly Cyber Trends Report - 2026-10-20</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 <style>
   :root {
@@ -87,95 +87,101 @@
 
 <header>
   <h1>🛡️ Weekly Cyber Trends Report</h1>
-  <p>Monday, October 19, 2026 &middot; Coverage window: October 12 &ndash; 19, 2026</p>
+  <p>Tuesday, October 20, 2026 &middot; Coverage window: October 13 &ndash; 20, 2026</p>
   <div class="meta">
     <span class="chip">Top 5 trends</span>
     <span class="chip">TSA watch</span>
-    <span class="chip">13 outlets reviewed</span>
+    <span class="chip">12 outlets reviewed</span>
     <span class="chip">Sources linked under every entry</span>
   </div>
 </header>
 
+<p class="note"><strong>Since last week:</strong> This report avoids the topics in the <a href="2026-10-19.html">October 19 report</a> and includes no follow-ups, so every trend below is new.</p>
+
 <h2>Top 5 cyber trends of the past week</h2>
 
 <article class="card">
-  <h3><span class="rank">1</span>Edge and remote-access products are exploited faster than they can be patched</h3>
-  <p>Ivanti Connect Secure zero-day CVE-2026-104935 (CVSS 8.6, fixed October 13, part of a three-bug chain whose privilege-escalation stage is still unpatched), PAN-OS CVE-2026-0322 (CVSS 8.6, root code execution, added to CISA's KEV on October 14 with an October 17 deadline) and Cisco Secure Email Gateway CVE-2026-76519 (CVSS 9.8, fixed in September but now exploited) all came under attack. Mandiant tied BeyondTrust Remote Support CVE-2026-102764 (CVSS 9.3) to the China-nexus group Armory Castle, active since August 29 ahead of an early-October patch, while SonicWall SMA1000 CVE-2026-102255 (CVSS 10.0) drew exploitation attempts within two days of disclosure.</p>
+  <h3><span class="rank">1</span>Trusted vendor channels become the way in: ConnectWise, AOMEI and Rank Math</h3>
+  <p>Attackers used a compromised Microsoft 365 credential for ConnectWise Cloud Backup (formerly SkyKick) to sign in to at least 173 customer tenants per Huntress, with activity peaking October 15 and, in at least one tenant, an app granting itself Global Administrator; ConnectWise disabled seven application identities and suspended Cloud Backup, SaaS Security and Cloud Management while it investigates. The same pattern hit software updates, as Google and ManageEngine tied UNC7017 to brief tampering of AOMEI Backupper's update servers (three windows of 5&ndash;10 minutes between May and July) that pushed the CROSSROAD downloader and SHINYROAD backdoor, and Rank Math PRO build 3.0.123 (CVE-2026-111862, CVSS 9.8 per Wordfence) shipped a self-restoring backdoor for about 11 hours on October 15&ndash;16.</p>
   <div class="sources">
     <strong>Sources</strong>
-    <a href="https://www.theregister.com/security/2026/10/14/ivanti-patches-connect-secure-zero-day-after-researchers-confirm-in-the-wild-attacks/5303095">https://www.theregister.com/security/2026/10/14/ivanti-patches-connect-secure-zero-day-after-researchers-confirm-in-the-wild-attacks/5303095</a>
-    <a href="https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html">https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html</a>
-    <a href="https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/">https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/</a>
-    <a href="https://cyberscoop.com/china-espionage-attacks-beyondtrust-zero-day-armory-castle">https://cyberscoop.com/china-espionage-attacks-beyondtrust-zero-day-armory-castle</a>
-    <a href="https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs">https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs</a>
-    <a href="https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/">https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/18/week-in-review-hidden-implant-in-ledger-wallets-linked-to-93m-theft-1500-npm-packages-exposed/">https://www.helpnetsecurity.com/2026/10/18/week-in-review-hidden-implant-in-ledger-wallets-linked-to-93m-theft-1500-npm-packages-exposed/</a>
+    <a href="https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html">https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/">https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/</a>
+    <a href="https://therecord.media/connectwise-suspends-cloud-backup-service-supply-chain-attack">https://therecord.media/connectwise-suspends-cloud-backup-service-supply-chain-attack</a>
+    <a href="https://www.darkreading.com/identity-access-management-security/connectwise-disables-cloud-backups-downstream-msps">https://www.darkreading.com/identity-access-management-security/connectwise-disables-cloud-backups-downstream-msps</a>
+    <a href="https://www.csoonline.com/article/4237087/connectwise-backup-credentials-exposed-multiple-microsoft-365-tenants.html">https://www.csoonline.com/article/4237087/connectwise-backup-credentials-exposed-multiple-microsoft-365-tenants.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-aomei-update-servers-to-secretly-spread-malware/">https://www.bleepingcomputer.com/news/security/hackers-hijack-aomei-update-servers-to-secretly-spread-malware/</a>
+    <a href="https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html">https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html</a>
   </div>
 </article>
 <article class="card">
-  <h3><span class="rank">2</span>Microsoft sets another Patch Tuesday record, with AI cited as the cause</h3>
-  <p>Microsoft's October 13 release fixed a record 1,413 CVEs (BleepingComputer counted 1,411), including more than 70 rated Critical and one exploited zero-day, the Windows Shell Mark-of-the-Web bypass CVE-2026-96951 (CVSS 8.8, CISA deadline October 16). Krebs reports that Microsoft credits large language models for the surge in bug discovery, and Tenable noted that this year's CVE total has already passed 4,000 with two months left.</p>
+  <h3><span class="rank">2</span>Zero-click spyware rides in on targeted ads</h3>
+  <p>Citizen Lab's &ldquo;AdFection&rdquo; research says Israeli ad-tech firm Discover-Tech bought real ad placements that served JavaScript only to chosen devices, delivering Candiru spyware to at least 45 Al Jazeera devices, with ads from March to June 2026 (3.77 billion bids, 442 million auctions won) appearing in 75,373 apps and 120,768 websites, though those figures are not infection counts. Google, IAB Europe, Beeswax, Eskimi and Vungle cut off the operator, while Citizen Lab confirmed on October 19 that Serbia's University of Belgrade rector was infected with NSO's Pegasus days before the October 25 election, bringing the 2026 count of spyware-targeted people in Serbia to at least 15.</p>
   <div class="sources">
     <strong>Sources</strong>
-    <a href="https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html">https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html</a>
-    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/">https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/</a>
-    <a href="https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/">https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/</a>
-    <a href="https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/">https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/</a>
-    <a href="https://cyberscoop.com/microsoft-patch-tuesday-october-2026/">https://cyberscoop.com/microsoft-patch-tuesday-october-2026/</a>
-    <a href="https://www.infosecurity-magazine.com/news/microsoft-patch-tuesday-record-1/">https://www.infosecurity-magazine.com/news/microsoft-patch-tuesday-record-1/</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/14/microsoft-patch-tuesday-cve-2026-96951-motw-bypass/">https://www.helpnetsecurity.com/2026/10/14/microsoft-patch-tuesday-cve-2026-96951-motw-bypass/</a>
+    <a href="https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/">https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/</a>
+    <a href="https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery">https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery</a>
+    <a href="https://cyberscoop.com/adfection-zero-click-spyware-discover-tech/">https://cyberscoop.com/adfection-zero-click-spyware-discover-tech/</a>
+    <a href="https://www.csoonline.com/article/4236143/no-click-required-how-the-ad-industry-became-a-pipeline-for-mercenary-spyware.html">https://www.csoonline.com/article/4236143/no-click-required-how-the-ad-industry-became-a-pipeline-for-mercenary-spyware.html</a>
+    <a href="https://therecord.media/serbia-spyware-pegasus-elections">https://therecord.media/serbia-spyware-pegasus-elections</a>
+    <a href="https://cyberscoop.com/pegasus-spyware-serbia-critics-elections/">https://cyberscoop.com/pegasus-spyware-serbia-critics-elections/</a>
   </div>
 </article>
 <article class="card">
-  <h3><span class="rank">3</span>AI raises the speed of attacks on infrastructure and the theft of AI credentials</h3>
-  <p>Booz Allen's lab found frontier AI models met all eight attack objectives against an industrial-control testbed, going from perimeter breach to action in the control zone in just over 16 minutes and moving a robotic arm (human sign-off was required for physical actions). On the criminal side, Bitsight saw forums selling autonomous hacking tools that run on stolen OpenAI, Anthropic and Google API keys, and OpenCode said an October 16 intrusion into a legacy system may have exposed provider keys for about 1.4% of Console users, with some users reporting unauthorized charges.</p>
+  <h3><span class="rank">3</span>Emergency patches for web-stack and virtualization flaws, one already exploited</h3>
+  <p>F5 shipped out-of-band fixes for three critical NGINX bugs (CVE-2026-15176, CVE-2026-97205, CVE-2026-93479) that cause heap overflows or use-after-free in the worker process, Vercel patched two Next.js remote-code-execution flaws (CVSS 9.5; fixed in 16.4.1) and Drupal fixed RCE bugs CVE-2026-108097 and CVE-2026-108099 while warning that exploits could appear within hours or days, with none of these reported as exploited yet. By contrast, attackers are already abusing Collabora's CODE Server app for Nextcloud (CVE-2026-110447, fixed in 26.4.303) to drop PHP web shells, and the Linux kernel flaw CVE-2026-99999 &ldquo;PwnEscape&rdquo; (CVSS 9.3) lets a guest VM read host memory, with fixes in stable kernels such as 6.12.113 and 6.18.57.</p>
   <div class="sources">
     <strong>Sources</strong>
-    <a href="https://www.theregister.com/security/2026/10/11/ai-systems-are-fully-capable-of-carrying-out-nightmare-attacks-against-infrastructure-and-nobodys-ready/5302450">https://www.theregister.com/security/2026/10/11/ai-systems-are-fully-capable-of-carrying-out-nightmare-attacks-against-infrastructure-and-nobodys-ready/5302450</a>
-    <a href="https://www.securityweek.com/ai-agents-navigate-unfamiliar-ot-systems-and-move-equipment-in-minutes-booz-allen-finds/">https://www.securityweek.com/ai-agents-navigate-unfamiliar-ot-systems-and-move-equipment-in-minutes-booz-allen-finds/</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/13/frontier-ai-ot-security-threat/">https://www.helpnetsecurity.com/2026/10/13/frontier-ai-ot-security-threat/</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/">https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/</a>
-    <a href="https://thehackernews.com/2026/10/opencode-console-breach-may-have.html">https://thehackernews.com/2026/10/opencode-console-breach-may-have.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/">https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/</a>
+    <a href="https://www.csoonline.com/article/4237420/f5-rushes-out-emergency-nginx-patches-for-three-critical-flaws.html">https://www.csoonline.com/article/4237420/f5-rushes-out-emergency-nginx-patches-for-three-critical-flaws.html</a>
+    <a href="https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html">https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/">https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/</a>
+    <a href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html">https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html</a>
+    <a href="https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html">https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html</a>
+    <a href="https://www.csoonline.com/article/4236460/linux-kernel-gets-a-fix-for-a-flaw-that-enabled-attackers-to-escape-vms.html">https://www.csoonline.com/article/4236460/linux-kernel-gets-a-fix-for-a-flaw-that-enabled-attackers-to-escape-vms.html</a>
+    <a href="https://www.theregister.com/virtualization/2026/10/19/linux-kvm-guest-host-escape-rated-critical-may-represent-a-new-way-to-attack-penguin-powered-networking/5303744">https://www.theregister.com/virtualization/2026/10/19/linux-kvm-guest-host-escape-rated-critical-may-represent-a-new-way-to-attack-penguin-powered-networking/5303744</a>
   </div>
 </article>
 <article class="card">
-  <h3><span class="rank">4</span>Retail and food supply chains disrupted across Europe</h3>
-  <p>Attackers hijacked refrigeration controllers at hundreds of French supermarkets on October 11&ndash;12, reportedly pushing temperatures up to 50&deg;C and spoiling stock, with the manufacturer blaming outdated firmware. Ahold Delhaize took systems offline across the U.S., Netherlands and Belgium from October 11 (disrupting Albert Heijn distribution and online orders, cause undisclosed), and UK fashion group TFG London (Phase Eight, Hobbs, Whistles) detected an incident the same day with data exposure still unknown.</p>
+  <h3><span class="rank">4</span>Takedowns and prosecutions hit phishing kits, North Korean IT workers and a crime market</h3>
+  <p>On October 14 Microsoft, Health-ISAC, Japan's JC3 and partners disrupted the CoGUI, Haozi and Iron Man System phishing kits sold through the YAM Store (Storm-3119), which sent over 1 billion emails and SMS messages to more than 75,000 organizations using about 17,000 domains. The DOJ announced charges on October 13 against 14 people in a North Korean remote-work scheme (searches of 40-plus Texas residences, about 187 computers seized, work at 70-plus companies), and North Macedonian police with the FBI arrested the suspected administrator of the OLVX credential marketplace, which had more than 1,500 seller accounts.</p>
   <div class="sources">
     <strong>Sources</strong>
-    <a href="https://www.theregister.com/security/2026/10/13/cyberattacks-crank-french-supermarket-refrigeration-systems-up-to-50c/5302784">https://www.theregister.com/security/2026/10/13/cyberattacks-crank-french-supermarket-refrigeration-systems-up-to-50c/5302784</a>
-    <a href="https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/">https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/</a>
-    <a href="https://therecord.media/cyberattack-groceru-ahold-delhaize">https://therecord.media/cyberattack-groceru-ahold-delhaize</a>
-    <a href="https://www.cybersecuritydive.com/news/ahold-delhaize-adusa-cybersecurity/832750/">https://www.cybersecuritydive.com/news/ahold-delhaize-adusa-cybersecurity/832750/</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/12/france-cyberattack-supermarket-freezers/">https://www.helpnetsecurity.com/2026/10/12/france-cyberattack-supermarket-freezers/</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/14/tfg-london-cyberattack-phase-eight-hobbs-whistles/">https://www.helpnetsecurity.com/2026/10/14/tfg-london-cyberattack-phase-eight-hobbs-whistles/</a>
+    <a href="https://thehackernews.com/2026/10/microsoft-disrupts-3-phishing-kits.html">https://thehackernews.com/2026/10/microsoft-disrupts-3-phishing-kits.html</a>
+    <a href="https://www.cybersecuritydive.com/news/phishing-marketplace-takedown-microsoft-health-isac/832965/">https://www.cybersecuritydive.com/news/phishing-marketplace-takedown-microsoft-health-isac/832965/</a>
+    <a href="https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html">https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html</a>
+    <a href="https://cyberscoop.com/doj-north-korea-remote-work-laptop-farms/">https://cyberscoop.com/doj-north-korea-remote-work-laptop-farms/</a>
+    <a href="https://www.cybersecuritydive.com/news/north-korea-it-worker-raids-arrests-charges/832968/">https://www.cybersecuritydive.com/news/north-korea-it-worker-raids-arrests-charges/832968/</a>
+    <a href="https://therecord.media/olvx-cybercrime-marketplace-arrest-north-macedonia">https://therecord.media/olvx-cybercrime-marketplace-arrest-north-macedonia</a>
+    <a href="https://cyberscoop.com/olvx-cybercrime-marketplace-operator-charged-north-macedonia/">https://cyberscoop.com/olvx-cybercrime-marketplace-operator-charged-north-macedonia/</a>
   </div>
 </article>
 <article class="card">
-  <h3><span class="rank">5</span>Software supply chain: CI/CD secrets and package registries</h3>
-  <p>The latest GhostAction wave pushed credential-stealing GitHub Actions workflows at more than 30,000 repositories via about 1,900 compromised accounts, spiking October 8&ndash;9 and attempting to extract 3,174 secrets before GitHub began blocking the workflow on October 9. Separately, Bloom Security found npm's Trusted Publishing matched repositories by name rather than numeric ID, leaving over 1,500 packages (more than 1 million monthly downloads) open to takeover until a fix announced October 2.</p>
+  <h3><span class="rank">5</span>ClickFix and fake AI tools trick users into running the malware themselves</h3>
+  <p>Any.Run analyzed 1,258 fake-AI-tool incidents over six months, finding Claude impersonated in 60% and ChatGPT or Codex in 33%, with about 45% involving victims pasting a command and developers' SSH keys, CI/CD tokens and API keys as the main prize. Forescout's Vedere Labs found six servers running the shared ROMULUS ClickFix platform (delivering LegionLoader in a roughly 842 MiB padded archive), and Huntress tied it to attackers abusing a signed Siemens Software Center via DLL sideloading (CVE-2026-110936, CVSS v4 8.4, fixed in 4.0.9.8) to install a remote access trojan.</p>
   <div class="sources">
     <strong>Sources</strong>
-    <a href="https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html">https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html</a>
-    <a href="https://www.scworld.com/brief/ghostaction-campaign-escalates-targeting-over-30000-github-repositories">https://www.scworld.com/brief/ghostaction-campaign-escalates-targeting-over-30000-github-repositories</a>
-    <a href="https://www.helpnetsecurity.com/2026/10/13/slugfest-npm-trusted-publishing-flaw/">https://www.helpnetsecurity.com/2026/10/13/slugfest-npm-trusted-publishing-flaw/</a>
+    <a href="https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk">https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk</a>
+    <a href="https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html">https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html</a>
+    <a href="https://www.infosecurity-magazine.com/news/romulus-malware-clickfix-deliver/">https://www.infosecurity-magazine.com/news/romulus-malware-clickfix-deliver/</a>
+    <a href="https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html">https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html</a>
   </div>
 </article>
-
 <h2>TSA watch: cybersecurity news mentioning TSA</h2>
 
 <article class="card tsa">
-  <h3>DHS inspector general finds weak access controls at TSA</h3>
-  <p>SC Media reported on October 16 that a DHS inspector general audit found weaknesses in TSA's IT access management, including improper handling of privileged accounts, service accounts created without proper approval, and former-employee accounts not consistently disabled. The brief says these gaps could let attackers compromise TSA's network and sensitive data, and cites a separate report that a contractor could extract passenger driver's license and passport images from biometric screening equipment without TSA's knowledge.</p>
-  <p class="note">This item was found only on SC Media; no other reviewed outlet surfaced a TSA cyber story dated October 12&ndash;19. The brief credits Biometric Update as its original source, which was not read for this report.</p>
+  <h3>No TSA-related cyber news found this week</h3>
+  <p>No story dated October 13&ndash;20, 2026 mentioned TSA in a cyber context on the 12 outlets reviewed, and targeted searches turned up nothing new. The most recent TSA items found predate this window: a September 2 notice revising TSA's rail and bus cybersecurity reporting requirements (new incident-response and implementation-plan updates, with comments due October 1) and a July 16 GAO report saying TSA's 2018 cybersecurity roadmap is outdated.</p>
+  <p class="note">Both items are not from this week; the DHS inspector general audit of TSA access controls (reported October 2 and 16) is omitted because last week's report already covered it.</p>
   <div class="sources">
     <strong>Sources</strong>
-    <a href="https://www.scworld.com/brief/tsa-faces-new-audit-revealing-weaknesses-in-sensitive-data-access-controls">https://www.scworld.com/brief/tsa-faces-new-audit-revealing-weaknesses-in-sensitive-data-access-controls</a>
+    <a href="https://industrialcyber.co/transport/tsa-updates-cybersecurity-reporting-and-assessment-requirements-for-surface-transportation/">https://industrialcyber.co/transport/tsa-updates-cybersecurity-reporting-and-assessment-requirements-for-surface-transportation/</a>
+    <a href="https://www.gao.gov/products/gao-26-107693">https://www.gao.gov/products/gao-26-107693</a>
   </div>
 </article>
 
 <h2>Where this report looks</h2>
-<p class="note">Thirteen outlets were reviewed through their published stories and search results this week, because direct front-page fetches were not permitted in this run. Ars Technica was not reviewed, so coverage may under-represent it.</p>
+<p class="note">Twelve outlets were reviewed through their front pages and linked stories this week. Ars Technica was blocked and SecurityWeek disallowed automated page fetches (it was only seen through search results), so coverage may under-represent both.</p>
 <div class="sitegrid">
   <div class="site"><a href="https://www.bleepingcomputer.com/">bleepingcomputer.com</a><br>Breaking news, vulnerabilities, ransomware</div>
   <div class="site"><a href="https://thehackernews.com/">thehackernews.com</a><br>Daily news and weekly recap</div>
@@ -191,12 +197,12 @@
   <div class="site"><a href="https://www.theregister.com/security/">theregister.com/security</a><br>Security news and analysis</div>
   <div class="site"><a href="https://cyberscoop.com/">cyberscoop.com</a><br>Policy and government coverage</div>
 </div>
-<p class="note">Popularity rankings consulted last week:
+<p class="note">Popularity rankings consulted previously:
   <a href="https://cybermagazine.com/top10/top-10-news-sites-cyber-security-industry-revealed">Cyber Magazine top 10</a>,
   <a href="https://bitsight.com/blog/best-cybersecurity-news-outlets">Bitsight's 15 best outlets</a>.
 </p>
 
-<footer>Generated by Claude. Runs every Monday at 7:00 AM Eastern. Summaries are written from the linked articles; headline-only sources (BleepingComputer, SecurityWeek, CyberScoop and Infosecurity Magazine Patch Tuesday items, Cybersecurity Dive, SC Media GhostAction, BleepingComputer refrigeration) were read at headline level.</footer>
+<footer>Generated by Claude. Runs every Monday morning. Summaries are written from the linked articles; sources read at headline level only: CyberScoop (AdFection, Serbia, OLVX), CSO Online (ConnectWise, NGINX, Linux kernel, ad-spyware, phishing takedown), The Register (KVM escape), Cybersecurity Dive (phishing takedown, North Korea) and The Hacker News (ROMULUS).</footer>
 
 </div>
 </body>
