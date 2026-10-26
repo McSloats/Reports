@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Cyber Trends Report - 2026-10-26</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --text: #17191c;
+    --muted: #5b626b;
+    --border: #dfe3e8;
+    --accent: #1d4ed8;
+    --accent-soft: #e6edff;
+    --warn: #b45309;
+    --warn-soft: #fff4e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --text: #e8eaed;
+      --muted: #9aa3ae;
+      --border: #2a313a;
+      --accent: #7aa2ff;
+      --accent-soft: #1b2744;
+      --warn: #f5b04c;
+      --warn-soft: #2c2212;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --text: #e8eaed;
+    --muted: #9aa3ae;
+    --border: #2a313a;
+    --accent: #7aa2ff;
+    --accent-soft: #1b2744;
+    --warn: #f5b04c;
+    --warn-soft: #2c2212;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 6px; }
+  header p { margin: 0; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip {
+    font-size: .8rem; padding: 3px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); border: 1px solid var(--border);
+  }
+  h2 { font-size: 1.2rem; margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin: 0 0 16px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.1rem; line-height: 1.35; }
+  .rank {
+    display: inline-block; min-width: 28px; text-align: center; margin-right: 8px;
+    background: var(--accent); color: #fff; border-radius: 6px; font-weight: 700; font-size: .95rem;
+  }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 0 0 10px; padding-left: 20px; }
+  .card li { margin: 4px 0; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: .88rem; }
+  .sources strong { color: var(--muted); display: block; margin-bottom: 4px; font-weight: 600; }
+  .sources a { display: block; word-break: break-all; color: var(--accent); margin: 2px 0; }
+  a { color: var(--accent); }
+  .tsa { border-left: 4px solid var(--warn); background: var(--warn-soft); }
+  .tsa h3 { color: var(--warn); }
+  .note { font-size: .88rem; color: var(--muted); }
+  .sitegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .site { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: .92rem; }
+  .site a { font-weight: 600; word-break: break-all; }
+  footer { margin-top: 40px; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>🛡️ Weekly Cyber Trends Report</h1>
+  <p>Monday, October 26, 2026 &middot; Coverage window: October 19 &ndash; 26, 2026</p>
+  <div class="meta">
+    <span class="chip">Top 5 trends</span>
+    <span class="chip">TSA watch</span>
+    <span class="chip">10 outlets reviewed</span>
+    <span class="chip">Sources linked under every entry</span>
+  </div>
+</header>
+
+<p class="note"><strong>Since last week:</strong> This report avoids the topics in the <a href="2026-10-19.html">October 19 report</a> and includes one follow-up (trend 2, agentic AI intrusions, building on the October 12 report); the rest are new.</p>
+
+<h2>Top 5 cyber trends of the past week</h2>
+
+<article class="card">
+  <h3><span class="rank">1</span>PHP2Shell and a week of parser and runtime RCE flaws</h3>
+  <p>PHP shipped emergency fixes on October 21 (8.5.12, 8.4.27, 8.3.36 and 8.2.35) for two unauthenticated remote-code-execution flaws called PHP2Shell (CVE-2026-109618 and CVE-2026-109619), after Amazon saw targeting on October 17, Cloudflare logged attempts rising to millions by October 22, and a Perplexity researcher recorded working exploitation in honeypots on October 24; a further unpatched PHP bug (CVE-2026-115560) has an interim mitigation of setting session.upload_progress.enabled=0. Other widely used components were hit the same week: Node.js fixed the Brotli decoder flaw behind &ldquo;Node2Shell&rdquo; (CVE-2026-111497, October 21; 24.22.1 confirmed to reject the test data), Ruby patched three regex-engine bugs (4.0.9, 3.4.12, 3.3.13) behind four critical GitLab RCE CVEs, and Pillow 13.0.0 fixed several image-parsing flaws, none of which were reported as exploited in the articles read.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html">https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/">https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/</a>
+    <a href="https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html">https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html</a>
+    <a href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html">https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html</a>
+    <a href="https://thehackernews.com/2026/10/critical-flaw-in-pythons-popular-pillow.html">https://thehackernews.com/2026/10/critical-flaw-in-pythons-popular-pillow.html</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">2</span>Follow-up: agentic AI intrusions are now being measured in the wild</h3>
+  <p>Since the October 12 report on attackers using AI agents, CrowdStrike published research on October 21 covering four actors whose agent frameworks were left exposed, including one that breached at least 15 Argentine healthcare organizations with a modified PentestGPT, an Indonesian actor running 819 mostly public skills with no custom orchestration, and a Russian-speaking actor driving Claude Code through a seven-step workflow, and Cybersecurity Dive reports CrowdStrike saw agentic intrusions triple in the second half of 2026 versus the first. Separately, NorForge found exposed control panels for the open-source Cairn tool being used against more than 1,200 shop sites at over 100 companies from about October 2, with roughly a 10% success rate, about $5 per task and about $5,000 in total token spend.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/">https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/</a>
+    <a href="https://www.cybersecuritydive.com/news/agentic-ai-cyberattacks-harnesses-crowdstrike/833714/">https://www.cybersecuritydive.com/news/agentic-ai-cyberattacks-harnesses-crowdstrike/833714/</a>
+    <a href="https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html">https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">3</span>Broken trust plumbing: eMudhra CA keys and hijacked Tor exit relays</h3>
+  <p>Eight eMudhra intermediate CA keys (six for TLS, two for code signing) from an April 30, 2025 key ceremony were weak enough to be recovered from the public certificates in under a second, so Chrome and Firefox blocked them within hours of the October 17 report, Apple and Microsoft followed on October 19 and 20, about 30,000 customer certificates need replacing, and eMudhra said on October 22 it will exit the global TLS business; whether anyone abused the keys is unknown. Separately, attackers controlled more than 300 Tor exit relays between October 1 and 5, redirecting SSH traffic to 12 interception servers to capture passwords (7.46% of exit capacity at the October 4 peak), with one relay operator tracing the intrusion to a reused password and the Ebury backdoor.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html">https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html</a>
+    <a href="https://www.csoonline.com/article/4238338/google-mozilla-revoke-emudhra-intermediates-after-private-key-compromise.html">https://www.csoonline.com/article/4238338/google-mozilla-revoke-emudhra-intermediates-after-private-key-compromise.html</a>
+    <a href="https://www.helpnetsecurity.com/?p=388647">https://www.helpnetsecurity.com/?p=388647</a>
+    <a href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html">https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">4</span>Network and security management platforms exploited: Arista VeloCloud and FortiSIEM</h3>
+  <p>CISA added Arista VeloCloud Orchestrator&rsquo;s SQL injection flaw (CVE-2026-114625, CVSS 9.9) to its Known Exploited Vulnerabilities catalog on October 23, with Arista confirming active exploitation, fixes in 5.2.3.18, 6.1.3.10 and 6.4.2.12, and The Hacker News counting it as the third VeloCloud Orchestrator flaw exploited since July. Fortinet&rsquo;s FortiSIEM 7.5.0 has a critical unauthenticated path-traversal-to-RCE bug (CVE-2026-106173, CVSS 9.4, gRPC port 27918, fixed in 7.5.1) with a public Horizon3.ai exploit, and the Canadian Centre for Cyber Security says it is being exploited, citing open-source reporting.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html">https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog">https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog</a>
+    <a href="https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html">https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">5</span>SafePay ransomware advisory and fresh data-exposure fallout</h3>
+  <p>The FBI and CISA, with German and UK agencies, issued an advisory on October 20 saying SafePay has hit at least 600 organizations since August 2024, gaining access through stolen credentials, brute force, VPNs and edge-device flaws (including CVE-2020-3259 and CVE-2023-20269), while Conduent agreed on October 16 to an $80 million settlement over an attack linked to the group. Meanwhile the State Bank of India confirmed on October 21 that 3,897 customer records appeared in a dark-web set a seller claims holds 375,000 rows, and OpenCode said a legacy-system breach on October 16 may have exposed provider API keys for 1.4% of its Console users, with no confirmed misuse in either case.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.cybersecuritydive.com/news/fbi-cisa-warn-safepay-ransomware-threat-critical-infrastructure/833589/">https://www.cybersecuritydive.com/news/fbi-cisa-warn-safepay-ransomware-threat-critical-infrastructure/833589/</a>
+    <a href="https://therecord.media/fbi-says-safepay-ransomware-gang-among-most-active-600-victims">https://therecord.media/fbi-says-safepay-ransomware-gang-among-most-active-600-victims</a>
+    <a href="https://www.infosecurity-magazine.com/news/safepay-compromised-critical/">https://www.infosecurity-magazine.com/news/safepay-compromised-critical/</a>
+    <a href="https://thehackernews.com/2026/10/state-bank-of-india-confirms-data-leak.html">https://thehackernews.com/2026/10/state-bank-of-india-confirms-data-leak.html</a>
+    <a href="https://thehackernews.com/2026/10/opencode-console-breach-may-have.html">https://thehackernews.com/2026/10/opencode-console-breach-may-have.html</a>
+  </div>
+</article>
+<h2>TSA watch: cybersecurity news mentioning TSA</h2>
+
+<article class="card tsa">
+  <h3>No TSA-related cyber news found this week</h3>
+  <p>No story dated October 19&ndash;26, 2026 that I could read or find in search results mentioned TSA in a cyber context, and targeted searches returned only older aviation-cyber items and non-cyber TSA news such as PreCheck upgrades. Items that surfaced were ones already covered in earlier reports, so none are restated here.</p>
+</article>
+
+<h2>Where this report looks</h2>
+<p class="note">Ten outlets were reviewed this week, but their front pages could not be fetched (no approval was available in this unattended run), so coverage comes from search listings and the linked articles I could open and may under-represent breaking items, and these were not reached (none worked around): <a href="https://krebsonsecurity.com/">krebsonsecurity.com</a>, <a href="https://www.scworld.com/">scworld.com</a>, <a href="https://www.theregister.com/security/">theregister.com/security</a>, <a href="https://arstechnica.com/security/">arstechnica.com/security</a>.</p>
+<div class="sitegrid">
+  <div class="site"><a href="https://www.bleepingcomputer.com/">bleepingcomputer.com</a><br>Search listings and linked stories</div>
+  <div class="site"><a href="https://thehackernews.com/">thehackernews.com</a><br>Articles and weekly recap read</div>
+  <div class="site"><a href="https://www.securityweek.com/">securityweek.com</a><br>Search listings only</div>
+  <div class="site"><a href="https://www.darkreading.com/">darkreading.com</a><br>Search listings only</div>
+  <div class="site"><a href="https://therecord.media/">therecord.media</a><br>Articles read</div>
+  <div class="site"><a href="https://www.cybersecuritydive.com/">cybersecuritydive.com</a><br>Articles read</div>
+  <div class="site"><a href="https://www.infosecurity-magazine.com/">infosecurity-magazine.com</a><br>Articles read</div>
+  <div class="site"><a href="https://www.csoonline.com/">csoonline.com</a><br>Articles read</div>
+  <div class="site"><a href="https://www.helpnetsecurity.com/">helpnetsecurity.com</a><br>Articles read</div>
+  <div class="site"><a href="https://cyberscoop.com/">cyberscoop.com</a><br>Search listings only</div>
+</div>
+
+<footer>Generated by Claude. Runs every Monday morning. Summaries are written from the linked articles; items known from search-result headlines only (not opened) were excluded from the summaries.</footer>
+
+</div>
+</body>
+</html>
