@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Cyber Trends Report - 2026-11-03</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --text: #17191c;
+    --muted: #5b626b;
+    --border: #dfe3e8;
+    --accent: #1d4ed8;
+    --accent-soft: #e6edff;
+    --warn: #b45309;
+    --warn-soft: #fff4e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --text: #e8eaed;
+      --muted: #9aa3ae;
+      --border: #2a313a;
+      --accent: #7aa2ff;
+      --accent-soft: #1b2744;
+      --warn: #f5b04c;
+      --warn-soft: #2c2212;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --text: #e8eaed;
+    --muted: #9aa3ae;
+    --border: #2a313a;
+    --accent: #7aa2ff;
+    --accent-soft: #1b2744;
+    --warn: #f5b04c;
+    --warn-soft: #2c2212;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 6px; }
+  header p { margin: 0; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip {
+    font-size: .8rem; padding: 3px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); border: 1px solid var(--border);
+  }
+  h2 { font-size: 1.2rem; margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin: 0 0 16px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.1rem; line-height: 1.35; }
+  .rank {
+    display: inline-block; min-width: 28px; text-align: center; margin-right: 8px;
+    background: var(--accent); color: #fff; border-radius: 6px; font-weight: 700; font-size: .95rem;
+  }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 0 0 10px; padding-left: 20px; }
+  .card li { margin: 4px 0; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: .88rem; }
+  .sources strong { color: var(--muted); display: block; margin-bottom: 4px; font-weight: 600; }
+  .sources a { display: block; word-break: break-all; color: var(--accent); margin: 2px 0; }
+  a { color: var(--accent); }
+  .tsa { border-left: 4px solid var(--warn); background: var(--warn-soft); }
+  .tsa h3 { color: var(--warn); }
+  .note { font-size: .88rem; color: var(--muted); }
+  .sitegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .site { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: .92rem; }
+  .site a { font-weight: 600; word-break: break-all; }
+  footer { margin-top: 40px; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>🛡️ Weekly Cyber Trends Report</h1>
+  <p>Tuesday, November 3, 2026 &middot; Coverage window: October 26 &ndash; November 3, 2026</p>
+  <div class="meta">
+    <span class="chip">Top 5 trends</span>
+    <span class="chip">TSA watch</span>
+    <span class="chip">13 outlets reviewed</span>
+    <span class="chip">Sources linked under every entry</span>
+  </div>
+</header>
+
+<p class="note"><strong>Since last week:</strong> This report avoids the topics in the <a href="2026-10-26.html">October 26 report</a> and the October 19 report and includes one follow-up (trend 4, agentic AI), so new PHP2Shell attacks on Palo Alto firewalls were left out under the one-follow-up limit.</p>
+
+<h2>Top 5 cyber trends of the past week</h2>
+
+<article class="card">
+  <h3><span class="rank">1</span>The largest crypto heist on record: Binance, then Polymarket and Mercado Bitcoin</h3>
+  <p>The FBI, Secret Service and IRS-CI attributed the theft of more than $6.3 billion from Binance, ahead of Bybit&rsquo;s $1.46 billion in 2025 as the largest crypto theft on record, to North Korea&rsquo;s TraderTraitor; Binance first pointed to a DevOps engineer&rsquo;s compromised laptop that reached a withdrawal service container and later cited &ldquo;additional points of breach,&rdquo; about $3 billion has been frozen, and Elliptic counted roughly 12,000 laundering wallets across 11 blockchains. Other platforms were hit within days: Polymarket is repaying $3.9 million after a swapped DebugBear performance script drained user wallets on October 29 (DebugBear suspects its domain registrar), and Brazil&rsquo;s Mercado Bitcoin suspended deposits and withdrawals on November 2 after security firms saw more than $46 million leave, though experts dispute its claim that customers were unharmed.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://therecord.media/fbi-blames-tradertraitor-for-binance-hack">https://therecord.media/fbi-blames-tradertraitor-for-binance-hack</a>
+    <a href="https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html">https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html</a>
+    <a href="https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html">https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html</a>
+    <a href="https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise">https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise</a>
+    <a href="https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist">https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">2</span>Connected devices turned against their owners: supermarket freezers, Node-RED and the XCPE botnet</h3>
+  <p>Overnight into November 2, attackers remotely forced refrigeration controllers into defrost or raised setpoints (to 50&deg;C in Sweden and Estonia) at stores in Belgium, Sweden, Ireland, Estonia, the Netherlands, Luxembourg, Finland, Portugal and Italy, including about 40 Delhaize stores in Belgium and 13 SuperValu stores in Ireland, weeks after a similar attack in France with about 700 victims; reporting named Danfoss and Copeland equipment, much of it older or unsupported, Belgium opened a criminal investigation, and nobody has claimed the attacks. Separately, Google and partners including Japan&rsquo;s National Police Agency and Lumen took down XCPE, a backdoor on at least 1.3 million Android TV boxes that Google attributes to manufacturer Videostrong (now banned from certified Android) for selling access to criminals, while VulnCheck saw CVE-2026-58115 (CVSS 10.0, a Node-RED authentication gap on Siemens SIMATIC IoT2050 Advanced, fixed in 4.3.4.1) exploited from October 30 to drop a Linux bot and persistent command flows.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://therecord.media/cyberattack-grocery-freezers-europe">https://therecord.media/cyberattack-grocery-freezers-europe</a>
+    <a href="https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html">https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html</a>
+    <a href="https://www.theregister.com/cyber-crime/2026/11/02/frozen-part-ii-hackers-remotely-defrost-produce-in-euro-supermarkets-again/5306924">https://www.theregister.com/cyber-crime/2026/11/02/frozen-part-ii-hackers-remotely-defrost-produce-in-euro-supermarkets-again/5306924</a>
+    <a href="https://www.helpnetsecurity.com/2026/11/02/xcpe-botnet-android-backdoor/">https://www.helpnetsecurity.com/2026/11/02/xcpe-botnet-android-backdoor/</a>
+    <a href="https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/">https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/</a>
+    <a href="https://www.helpnetsecurity.com/2026/11/03/node-red-cve-2026-58115-exploitation/">https://www.helpnetsecurity.com/2026/11/03/node-red-cve-2026-58115-exploitation/</a>
+    <a href="https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html">https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">3</span>Exploited VPNs, firewalls and hypervisors: Ivanti, Cisco and VMware, plus a 9.8 Linux bug</h3>
+  <p>CISA ordered federal agencies to fix two more Ivanti Connect Secure zero-days, CVE-2026-111357 (privilege escalation, due November 2) and CVE-2026-118527 (authenticated file upload, due November 13), which the actor Volexity tracks as UTA0576 chained with October&rsquo;s CVE-2026-104935 (CVSS 8.6) to take SSL VPN appliances and query Active Directory for LAPS passwords and BitLocker keys, in activity that evades Ivanti&rsquo;s Integrity Checker Tool. Cisco patched an actively exploited ASA and FTD SSL VPN flaw (CVE-2026-76418, CVSS 8.6) that lets an unauthenticated attacker reload devices using secondary authentication, CISA added VMware ESX&rsquo;s logging flaw CVE-2026-41709 (CVSS 2.7) to its exploited list on October 28 after CrowdStrike tied zero-day use to China-nexus Warp Panda, and Red Hat shipped fixes on November 1 for the Linux TCP use-after-free CVE-2026-98432 (CVSS 9.8), which has no reported attacks but for which Anthropic says an unreleased model wrote a remote root exploit against MPTCP listeners.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.helpnetsecurity.com/2026/11/02/cisa-to-federal-agencies-remediate-exploited-ivanti-connect-secure-vulnerabilities-cve-2026-111357-cve-2026-118527/">https://www.helpnetsecurity.com/2026/11/02/cisa-to-federal-agencies-remediate-exploited-ivanti-connect-secure-vulnerabilities-cve-2026-111357-cve-2026-118527/</a>
+    <a href="https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935/">https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935/</a>
+    <a href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html">https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html</a>
+    <a href="https://www.csoonline.com/article/4242420/new-cisco-firewall-zero-day-being-actively-exploited.html">https://www.csoonline.com/article/4242420/new-cisco-firewall-zero-day-being-actively-exploited.html</a>
+    <a href="https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html">https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html</a>
+    <a href="https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html">https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">4</span>Follow-up: agentic AI reaches state espionage and Chainalysis</h3>
+  <p>Since the October 26 report, CrowdStrike said China-nexus Vapor Panda ran the open-source ARTEX framework with DeepSeek against more than 200 organizations in at least 14 countries from October 17, with BloodAlchemy backdoors confirmed at nine, about 1.4 billion input tokens in one intrusion, and agentic adversary attacks rising from about 45 in September to 126 in October (CyberScoop puts compromised sensitive targets at about 140, a figure the other accounts read do not repeat). Chainalysis disclosed on October 30 that attackers using &ldquo;offensive agentic techniques&rdquo; reached internal tools and customer names, emails and role labels, and by November 3 it had taken products including Reactor offline, while Kaspersky described the CyberStrikeAI agent reaching domain admin three to four days after deployment at education organizations in Africa and Latin America.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://cyberscoop.com/china-vapor-panda-agentic-ai-artex-campaign-crowdstrike/">https://cyberscoop.com/china-vapor-panda-agentic-ai-artex-campaign-crowdstrike/</a>
+    <a href="https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html">https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html</a>
+    <a href="https://www.cybersecuritydive.com/news/agentic-pen-testing-tool-espionage-campaigns/873427/">https://www.cybersecuritydive.com/news/agentic-pen-testing-tool-espionage-campaigns/873427/</a>
+    <a href="https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/">https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/</a>
+    <a href="https://www.helpnetsecurity.com/2026/11/02/chainalysis-breached-using-offensive-agentic-techniques/">https://www.helpnetsecurity.com/2026/11/02/chainalysis-breached-using-offensive-agentic-techniques/</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">5</span>AI developer tooling and its secrets under attack: Cursor, Trigger.dev, GitHub and LLMjacking</h3>
+  <p>Trojanized Claude Code extension builds (2.1.312 and 2.1.313) sat on Cursor&rsquo;s marketplace for about 11 hours on October 29, adding an attacker SSH key, reverse tunnel and persistence for at most 5,000 installs before Cursor shut down and rebuilt the marketplace, with Anthropic saying its own systems and official channels were unaffected, and Trigger.dev disclosed on November 1 that an attacker read environment variables for a subset of customers of its AI workflow platform. The wider hunt for developer credentials showed up in Wiz&rsquo;s Gheist findings (more than 13,500 branches across 850-plus GitHub accounts planting secret-dumping workflows), Radware&rsquo;s report of 83 hidden-command items across 61 public repositories including Trivy and MLflow, mostly posted in 43 minutes on September 1, and Google&rsquo;s warning that LLMjacking bills have reached about $1 million, with one actor making over 500,000 model calls in under eight hours.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html">https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html</a>
+    <a href="https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html">https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html</a>
+    <a href="https://www.theregister.com/security/2026/11/02/thieves-pilfer-environment-variables-from-trigger-ai-workflow-tool/5306998">https://www.theregister.com/security/2026/11/02/thieves-pilfer-environment-variables-from-trigger-ai-workflow-tool/5306998</a>
+    <a href="https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html">https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html</a>
+    <a href="https://www.theregister.com/security/2026/10/29/attackers-turn-github-issues-into-supply-chain-campaign-against-61-public-repos-in-less-than-an-hour/5306153">https://www.theregister.com/security/2026/10/29/attackers-turn-github-issues-into-supply-chain-campaign-against-61-public-repos-in-less-than-an-hour/5306153</a>
+    <a href="https://www.helpnetsecurity.com/2026/11/03/llmjacking-stolen-ai-access-cloud-bills/">https://www.helpnetsecurity.com/2026/11/03/llmjacking-stolen-ai-access-cloud-bills/</a>
+  </div>
+</article>
+<h2>TSA watch: cybersecurity news mentioning TSA</h2>
+
+<article class="card tsa">
+  <h3>No TSA-related cyber news found this week</h3>
+  <p>No story dated October 26 &ndash; November 3, 2026 that I could read or find in search results mentioned TSA in a cyber context, and targeted searches returned only older items while TSA&rsquo;s own directives page showed nothing from this window. The closest item was the leak of records on more than 41,000 DHS employees published October 28, but the articles read name components such as CBP, ICE, USCIS and CISA and do not mention TSA, so it is not a TSA item on current evidence.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://cyberscoop.com/dhs-employee-data-leak-ddosecrets/">https://cyberscoop.com/dhs-employee-data-leak-ddosecrets/</a>
+    <a href="https://cybernews.com/security/massive-breach-hits-dhs-41000-employees-exposed/">https://cybernews.com/security/massive-breach-hits-dhs-41000-employees-exposed/</a>
+    <a href="https://www.tsa.gov/sd-and-ea">https://www.tsa.gov/sd-and-ea</a>
+  </div>
+</article>
+
+<h2>Where this report looks</h2>
+<p class="note">Thirteen outlets were reviewed this week through their front pages, linked articles and search listings, with Dark Reading, SC Media and SecurityWeek only partly reachable. <a href="https://arstechnica.com/security/">arstechnica.com/security</a> was blocked and was not worked around.</p>
+<div class="sitegrid">
+  <div class="site"><a href="https://www.bleepingcomputer.com/">bleepingcomputer.com</a><br>Front page read</div>
+  <div class="site"><a href="https://thehackernews.com/">thehackernews.com</a><br>Front page, articles and weekly recap read</div>
+  <div class="site"><a href="https://www.securityweek.com/">securityweek.com</a><br>Front page only; article fetches failed</div>
+  <div class="site"><a href="https://www.darkreading.com/">darkreading.com</a><br>Search listings only; pages returned almost no text</div>
+  <div class="site"><a href="https://krebsonsecurity.com/">krebsonsecurity.com</a><br>Front page and article read</div>
+  <div class="site"><a href="https://therecord.media/">therecord.media</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://www.cybersecuritydive.com/">cybersecuritydive.com</a><br>Front page and article read</div>
+  <div class="site"><a href="https://www.infosecurity-magazine.com/">infosecurity-magazine.com</a><br>Front page read</div>
+  <div class="site"><a href="https://www.scworld.com/">scworld.com</a><br>Front page and search listings; article fetch failed</div>
+  <div class="site"><a href="https://www.csoonline.com/">csoonline.com</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://www.helpnetsecurity.com/">helpnetsecurity.com</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://www.theregister.com/security/">theregister.com/security</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://cyberscoop.com/">cyberscoop.com</a><br>Front page and articles read</div>
+</div>
+
+<footer>Generated by Claude. Runs every Monday morning. Summaries are written from the linked articles; items known only from headlines were excluded from the summaries.</footer>
+
+</div>
+</body>
+</html>
