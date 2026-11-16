@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Cyber Trends Report - 2026-11-16</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --text: #17191c;
+    --muted: #5b626b;
+    --border: #dfe3e8;
+    --accent: #1d4ed8;
+    --accent-soft: #e6edff;
+    --warn: #b45309;
+    --warn-soft: #fff4e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --text: #e8eaed;
+      --muted: #9aa3ae;
+      --border: #2a313a;
+      --accent: #7aa2ff;
+      --accent-soft: #1b2744;
+      --warn: #f5b04c;
+      --warn-soft: #2c2212;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --text: #e8eaed;
+    --muted: #9aa3ae;
+    --border: #2a313a;
+    --accent: #7aa2ff;
+    --accent-soft: #1b2744;
+    --warn: #f5b04c;
+    --warn-soft: #2c2212;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 6px; }
+  header p { margin: 0; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip {
+    font-size: .8rem; padding: 3px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); border: 1px solid var(--border);
+  }
+  h2 { font-size: 1.2rem; margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin: 0 0 16px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.1rem; line-height: 1.35; }
+  .rank {
+    display: inline-block; min-width: 28px; text-align: center; margin-right: 8px;
+    background: var(--accent); color: #fff; border-radius: 6px; font-weight: 700; font-size: .95rem;
+  }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 0 0 10px; padding-left: 20px; }
+  .card li { margin: 4px 0; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: .88rem; }
+  .sources strong { color: var(--muted); display: block; margin-bottom: 4px; font-weight: 600; }
+  .sources a { display: block; word-break: break-all; color: var(--accent); margin: 2px 0; }
+  a { color: var(--accent); }
+  .tsa { border-left: 4px solid var(--warn); background: var(--warn-soft); }
+  .tsa h3 { color: var(--warn); }
+  .note { font-size: .88rem; color: var(--muted); }
+  .sitegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .site { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: .92rem; }
+  .site a { font-weight: 600; word-break: break-all; }
+  footer { margin-top: 40px; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🛡️ Weekly Cyber Trends Report</h1>
+  <p>Monday, November 16, 2026 &middot; Coverage window: November 9 &ndash; 16, 2026</p>
+  <div class="meta">
+    <span class="chip">Top 5 trends</span>
+    <span class="chip">TSA watch</span>
+    <span class="chip">10 of 14 outlets reachable</span>
+    <span class="chip">Sources linked under every entry</span>
+  </div>
+</header>
+<p class="note"><strong>Since last week:</strong> This report avoids the topics in the <a href="2026-11-09.html">November 9 report</a> and the November 3 report and has no follow-ups, so the DOJ&rsquo;s $1.2 billion Binance seizure, Cursor&rsquo;s finding that a stolen Fireworks AI key caused its extension incident, and more agentic-AI attack reports were left out as developments of stories already covered.</p>
+
+<h2>Top 5 cyber trends of the past week</h2>
+
+<article class="card">
+  <h3><span class="rank">1</span>Firewalls and MSP tools turned into footholds: a Check Point zero-day, N-central miners and ScreenConnect attacks</h3>
+  <p>Check Point said attackers who got into Security Gateways through PHP2Shell (CVE-2026-109618 and CVE-2026-109619) in Mobile Access portals from October 30 used a new zero-day, CVE-2026-123039 (CVSS 7.8, a root <code>dynamic_server</code> daemon listening on an unauthenticated, world-writable local socket in R81 through R82.20), to get root at &ldquo;a couple of dozen customers,&rdquo; install the TSGA backdoor and TSProxy, and run a destroy_v6 wiper on a VMware ESXi host, with Israeli organizations hit first and CISA setting a November 16 federal deadline for the hotfix (SK1000362). Remote-management tools were hit at the same time: Huntback found an XMRig miner on 21 N-able N-central servers, 19 of them already on Hotfix 2, after the 4EverAble2Shell chain (including Apache Axis CVE-2026-90436, CVSS 9.8) was published, so N-able told customers to disable the Legacy API and began shipping 2026.4 HF3, while Huntress counted 288 endpoints at 48 organizations compromised through a blank-key login flaw in the third-party RMM+ ScreenConnect extension (1.0.31 and 1.0.32), and Blackpoint found that the SCKit toolkit dropped on them tries to jump to MSP technicians through ScreenConnect CVE-2026-84869 (fixed in 26.6.5), though no successful jump has been seen.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/">https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/</a>
+    <a href="https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html">https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html</a>
+    <a href="https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html">https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/">https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">2</span>Patch week: exploited Outlook and Chrome zero-days, an unpatched Windows SYSTEM exploit and four CVSS 10 SAP bugs</h3>
+  <p>Microsoft&rsquo;s November 10 Patch Tuesday fixed what The Hacker News counts as 1,259 flaws (the second month in a row above 1,000), including the actively exploited Outlook spoofing bug CVE-2026-124194 (CVSS 6.5), in which opening a crafted message file makes Outlook connect to an attacker&rsquo;s server without warning and can leak the user&rsquo;s NTLMv2 hash (CISA deadline November 24), and Google patched Chrome&rsquo;s eighth exploited zero-day of 2026, the XML use-after-free CVE-2026-125350 (CVSS 8.8, fixed in 157.0.8103.50/.51). On November 13 the researcher known as Nightmare Eclipse published SignDrop, an unpatched Windows CLFS logic flaw that abuses Defender&rsquo;s signature-update RPC to give a standard user SYSTEM on tested Windows 11 26H2 and Server 2025 builds (Microsoft says it is investigating, that Defender blocks it, and that it has seen no exploitation), while SAP fixed four pre-auth CVSS 10.0 flaws, namely the ICM2SHELL RCE pair (CVE-2026-76964, CVE-2026-89126), PROXYGATE (CVE-2026-89103) and the SAML log-in-as-anyone bug CVE-2026-120017, and Citrix patched 10 critical NetScaler bugs including the Console authentication bypass CVE-2026-120869 (CVSS 9.4), none of them reported exploited.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html">https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html</a>
+    <a href="https://www.theregister.com/security/2026/11/10/november-patch-tuesday-boasts-over-1000-bugs-one-already-under-attack/5308946">https://www.theregister.com/security/2026/11/10/november-patch-tuesday-boasts-over-1000-bugs-one-already-under-attack/5308946</a>
+    <a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html">https://thehackernews.com/2026/11/google-issues-chrome-security-update.html</a>
+    <a href="https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/">https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/</a>
+    <a href="https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html">https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html</a>
+    <a href="https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/">https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">3</span>Police hit malware loaders, dark-web buyers and North Korea&rsquo;s fake-meeting scheme</h3>
+  <p>An Operation Endgame action announced November 13 took down 235 servers and 257 domains behind Gootloader, CastleRAT and StealC, cleaned Gootloader from 681 hacked websites and recovered about 6.4 million stolen logins from more than 40,000 victims, with the DOJ tying Gootloader to at least 44 U.S. ransomware attacks costing about $28.8 million, while Europol&rsquo;s Operation TorNado arrested 354 vendors and buyers from the Archetyp, Bohemia, Nemesis, Kingdom and Tor2Door markets in 14 countries (132 in the U.S.) and seized more than €210 million in cash and crypto, 209 firearms and tonnes of drugs. The FBI also seized cloud infrastructure and more than 900 victim webcam recordings used by FaceStealer, a BlueNoroff (APT38) scheme it says stole more than $400 million in crypto over 18 months by inviting targets from hijacked accounts to fake Zoom or Teams calls, playing recorded or deepfake video of people they knew, then pushing a ClickFix-style &ldquo;audio fix&rdquo; that installs malware.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html">https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html</a>
+    <a href="https://cyberscoop.com/operation-endgame-malware-takedown-gootloader-stealc-europol/">https://cyberscoop.com/operation-endgame-malware-takedown-gootloader-stealc-europol/</a>
+    <a href="https://www.helpnetsecurity.com/2026/11/13/europol-dark-web-arrests-cybercrime/">https://www.helpnetsecurity.com/2026/11/13/europol-dark-web-arrests-cybercrime/</a>
+    <a href="https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html">https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html</a>
+    <a href="https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted">https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">4</span>Poisoned code, hardware and updates: wfx-loot on GitHub, implanted Trezor wallets and a German drone vendor</h3>
+  <p>Starting November 10, the wfx-loot campaign used 4,837 hijacked GitHub accounts to open &ldquo;docs: dependency audit notes&rdquo; probe pull requests in 61,764 repositories and ran a roughly 1,500-line secret stealer in at least 1,806 of them, taking Actions secrets, cloud and SSH credentials and OpenAI, Anthropic, Copilot and Cursor tokens, then rewriting AWS role trust policies and adding Azure <code>wfx-ci-*</code> federated credentials that survive secret rotation, according to Aikido and GitGuardian. Trezor confirmed on November 12 that three Safe 5 wallets sold by CryptoBilis, a former Southeast Asian reseller, carried an extra circuit board that reads the recovery phrase off the screen and sends it out over the mobile network, and it released firmware 2.13.1 to block the known implants, while German drone maker Quantum Systems said its drones are flying again after the Bundeswehr grounded them because, according to Der Spiegel, a malicious update to its QBase mission-planning software reached customers in late October.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.helpnetsecurity.com/2026/11/12/wfx-loot-github-actions-secret-stealer/">https://www.helpnetsecurity.com/2026/11/12/wfx-loot-github-actions-secret-stealer/</a>
+    <a href="https://www.csoonline.com/article/4248672/thousands-of-github-repos-hit-with-secret-stealing-malware.html">https://www.csoonline.com/article/4248672/thousands-of-github-repos-hit-with-secret-stealing-malware.html</a>
+    <a href="https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html">https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html</a>
+    <a href="https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/">https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/</a>
+    <a href="https://www.theregister.com/security/2026/11/13/quantum-systems-drones-back-in-the-air-after-malware-scare/5309658">https://www.theregister.com/security/2026/11/13/quantum-systems-drones-back-in-the-air-after-malware-scare/5309658</a>
+  </div>
+</article>
+<article class="card">
+  <h3><span class="rank">5</span>SilentAir: state-level call and SMS interception from inside Asian mobile networks</h3>
+  <p>Telecom security firm Enea said a newly named state-level actor, SilentAir, hijacked equipment at operators in at least six Asian countries to send SS7 and Diameter location updates that diverted targets&rsquo; calls and texts, mostly people in Taiwan including political and government figures, with interception making up 18.3% of its activity (against 2.1% for a typical surveillance company) and some SMS 2FA codes captured right after a diversion took effect. Enea links SilentAir to China only with low confidence, citing a UTC+8 working day and the absence of Chinese targets, says the group is disrupted for now, and separately reports that the China-linked Liminal Panda&rsquo;s GTPDoor backdoor is in at least 5 to 10 operators, urging carriers to treat the IPX interconnect as untrusted.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/">https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/</a>
+    <a href="https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html">https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html</a>
+  </div>
+</article>
+
+<h2>TSA watch: cybersecurity news mentioning TSA</h2>
+
+<article class="card tsa">
+  <h3>No TSA-related cyber news found this week</h3>
+  <p>No story dated November 9&ndash;16, 2026 on the ten reachable outlets or in targeted searches mentioned TSA in a cyber context. The week&rsquo;s main aviation story, the FAA&rsquo;s nationwide ground stop on November 13, has not been blamed on a cyberattack (officials pointed to a software update on an L3Harris-run communications network and legacy equipment, with the FBI assisting), and the articles read do not mention TSA, so it is not a TSA item.</p>
+  <div class="sources">
+    <strong>Sources</strong>
+    <a href="https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/">https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/</a>
+    <a href="https://fortune.com/2026/11/15/cyberattack-hack-faa-air-traffic-control-communications-router-fbi-probe-sean-duffy-ground-stop">https://fortune.com/2026/11/15/cyberattack-hack-faa-air-traffic-control-communications-router-fbi-probe-sean-duffy-ground-stop</a>
+  </div>
+</article>
+
+<h2>Where this report looks</h2>
+<p class="note">Ten outlets were reachable and reviewed through their front pages and linked articles, though Cybersecurity Dive and CyberScoop showed few or no dates. Dark Reading, Infosecurity Magazine and SC Media returned HTTP 403 errors and <a href="https://arstechnica.com/security/">arstechnica.com/security</a> was blocked, and none of these blocks were worked around.</p>
+<div class="sitegrid">
+  <div class="site"><a href="https://www.bleepingcomputer.com/">bleepingcomputer.com</a><br>Front page and articles read; some articles returned 403</div>
+  <div class="site"><a href="https://thehackernews.com/">thehackernews.com</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://www.securityweek.com/">securityweek.com</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://www.darkreading.com/">darkreading.com</a><br>Blocked (HTTP 403)</div>
+  <div class="site"><a href="https://krebsonsecurity.com/">krebsonsecurity.com</a><br>Front page read</div>
+  <div class="site"><a href="https://therecord.media/">therecord.media</a><br>Front page and article read</div>
+  <div class="site"><a href="https://www.cybersecuritydive.com/">cybersecuritydive.com</a><br>Front page read; few dates shown</div>
+  <div class="site"><a href="https://www.infosecurity-magazine.com/">infosecurity-magazine.com</a><br>Blocked (HTTP 403)</div>
+  <div class="site"><a href="https://www.scworld.com/">scworld.com</a><br>Blocked (HTTP 403)</div>
+  <div class="site"><a href="https://www.csoonline.com/">csoonline.com</a><br>Front page and article read</div>
+  <div class="site"><a href="https://www.helpnetsecurity.com/">helpnetsecurity.com</a><br>Front page and articles read</div>
+  <div class="site"><a href="https://www.theregister.com/security/">theregister.com/security</a><br>Front page and article read</div>
+  <div class="site"><a href="https://cyberscoop.com/">cyberscoop.com</a><br>Front page read; no dates shown</div>
+  <div class="site"><a href="https://arstechnica.com/security/">arstechnica.com/security</a><br>Blocked; not worked around</div>
+</div>
+
+<footer>Generated by Claude. Runs every Monday morning; this edition covers news through November 16, 2026. Summaries are written from the linked articles; the Register Patch Tuesday and CyberScoop Endgame links support the summaries at headline level only.</footer>
+
+</div>
+</body>
+</html>
